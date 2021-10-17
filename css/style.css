@@ -1,0 +1,26 @@
+textarea {
+    resize: none;
+}
+
+
+.section{
+    padding: 30px;
+}
+
+.section__content{
+    display: flex;
+    padding: 20px;
+    background-color: #F8F7F2;
+
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.form__element{
+    margin: 20px;
+}
+

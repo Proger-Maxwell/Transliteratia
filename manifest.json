@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "Transliteratia",
+	"description": "Программа транслитерации Transliteratia",
+	"version": "1.0.0",
+	"icons": {"128": "images/el-trans-fav2.png"},
+	"chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+
+    "browser_action": {
+        "default_icon": "images/el-trans-fav2.png"
+    },
+
+    "permissions": [
+        "tabs"
+    ],
+
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    }
+}

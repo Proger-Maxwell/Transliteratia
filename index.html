@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">	
+    <title>Транслитератор Transliteria</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+     crossorigin="anonymous">
+</head>
+<body>
+    <!-- <div class="modal-header">
+        <h1 class="logo">
+            <img class="logo-icon" src="images/el-trans-fav2.png">Транслитератор Transliteria
+            <span class="version">(1.0.0)</span>
+        </h1>
+    </div>
+  <div class="modal-content">
+    <form name="form" method="post">
+      <input required="" placeholder="Product-code" name="code" type="text" class="modal__input">
+      <textarea required="" placeholder="Product-name" name="name" type="text" class="modal__textarea" cols="40" rows="10"></textarea>
+      <textarea placeholder="Transliteration" name="transliteration" type="text"  class="modal__textarea" id="code" readonly="readonly" cols="40" rows="10"></textarea>
+    </form>
+  </div> -->
+
+
+<div class="header section">
+  <div class="section__content">
+    <div class="header__img"><img class="logo-icon" src="images/el-trans-fav2.png"></div>
+    <div class="header__text"><h1>Інструменти контентменеджера-розробника</h1></div>
+</div>
+</div>
+<div class="section">
+  <div class="section__content">
+    <form name="transliteriatia-form" method="post">
+      <div class="form">
+        <div class="form__element"><textarea required="" placeholder="Product-code" name="code" id="transliteriatia-code" type="text" class="modal__textarea data" cols="40" rows="10"></textarea></div>
+        <div class="form__element"><textarea required="" placeholder="Product-name" name="name" id="transliteriatia-name" type="text" class="modal__textarea data" cols="40" rows="10"></textarea></div>
+        <div class="form__element control">
+          <div class="control__element"><input type="radio" name="adding" value="obi" checked>-obigriv-1<br>
+                                        <input type="radio" name="adding" value="image">-obigriv-image-1<br>
+                                        <input type="radio" name="adding" value="description">-obigriv-description-1<br></div>
+          <div class="control__element"><input type="checkbox" name="plus" checked="checked">+1</div>
+          <div class="control__element"><button type="submit" name="copy" id="copy">Скопировать</button></div>
+        </div>
+        <div class="form__element"><textarea readonly="readonly" placeholder="Transliteration" name="transliteration" type="text"  class="modal__textarea" id="transliteriatia-result" cols="40" rows="10"></textarea></div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- <div class="section">
+  <div class="section__content"></div>
+</div> -->
+<div class="footer section">
+  <div class="section__content"></div>
+</div>
+
+
+
+
+
+<script src="js/trans.js"></script>
+</body>
+</html>
