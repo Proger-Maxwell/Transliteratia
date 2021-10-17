@@ -1,14 +1,11 @@
 
-function copyElementToClipboard(text) {
-  text[0].select();
-  document.execCommand("copy");
-}
-
 
 function transliteriatia() {
   var strCode = document.getElementById("transliteriatia-code").value;
   var strName = document.getElementById("transliteriatia-name").value;
-  var str = strCode + strName;
+  var str;
+  if(strCode && strName){str = strCode +' '+ strName;}else{str = strCode + strName;}
+  
   var space = '-';
   var link = '';
   var transl = {
@@ -17,28 +14,32 @@ function transliteriatia() {
     'о': 'o', 'п': 'p', 'р': 'r','с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h',
     'ц': 'c', 'ч': 'ch', 'ш': 'sh', 'щ': 'sh','ъ': space,
     'ы': 'y', 'ь': space, 'э': 'e', 'ю': 'yu', 'я': 'ya'
-  }
+  };
     if (str != ''){
 
-      str = str.toLowerCase(); // в нижний регистр
+      str = str.toLowerCase();
 
       for (var i = 0; i < str.length; i++){
-        if (/[А-Яа-яёЁЇїІіЄєҐґ]/.test(str.charAt(i))){ // заменяем символы на укр
+        if (/[А-Яа-яёЁЇїІіЄєҐґ]/.test(str.charAt(i))){
           link += transl[str.charAt(i)];
-        } else if (/[a-z0-9]/.test(str.charAt(i))){ // символы на анг. оставляем как есть
+        } else if (/[a-z0-9]/.test(str.charAt(i))){ 
           link += str.charAt(i);
         } else {
-          if (link.slice(-1) !== space) link += space; // прочие символы заменяем на space
+          if (link.slice(-1) !== space){ link += space;} 
         }
       }
 
+      var radio = document.getElementsByName('transliteriatia-adding');
+      for(var a=0; a<radio.length; a++){
+        if(radio[a].checked){
+          link += radio[a].value;
+        }
+      }
 
       document.getElementById("transliteriatia-result").value = link;
-      return link;
+      navigator.clipboard.writeText(link);
     }
 }
-
-
 
 
 document.querySelectorAll('.data').forEach(item => {
@@ -49,12 +50,19 @@ document.querySelectorAll('.data').forEach(item => {
 
 document.getElementById("copy").addEventListener("click", function(event){
   event.preventDefault();
-  copyElementToClipboard(transliteriatia());
-  
+  let copyText = document.getElementById("transliteriatia-result").value;
+  navigator.clipboard.writeText(copyText);
+});
+
+document.getElementById("plusOne").addEventListener("click", function(event){
+  event.preventDefault();
+  let copyText = document.getElementById("transliteriatia-result").value;
+  let arrayCopyText = copyText.split('-');
+  let incriminal = Number(arrayCopyText.pop()) + 1;
+  document.getElementById("transliteriatia-result").value = arrayCopyText.join('-')+'-'+incriminal;
+  navigator.clipboard.writeText(arrayCopyText.join('-')+'-'+incriminal);
 });
 
 
-// var area = document.getElementsByClassName("data");
-// area.forEach(element => element.addEventListener('input'), transliteriatia());
 
 
