@@ -1,5 +1,4 @@
 
-
 function transliteriatia() {
   var strCode = document.getElementById("transliteriatia-code").value;
   var strName = document.getElementById("transliteriatia-name").value;
@@ -48,7 +47,7 @@ document.querySelectorAll('.data').forEach(item => {
   });
 });
 
-document.getElementById("copy").addEventListener("click", function(event){
+document.getElementById("transliteriatia-copy").addEventListener("click", function(event){
   event.preventDefault();
   let copyText = document.getElementById("transliteriatia-result").value;
   navigator.clipboard.writeText(copyText);

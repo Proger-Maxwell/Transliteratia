@@ -17,7 +17,9 @@ body {
 
 textarea {
     resize: none;
-    min-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    /* min-width: 300px; */
     min-height: 100px;
     /* height: 100%; */
     /* margin: 20px 0px; */
@@ -67,11 +69,12 @@ span{
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .form__element{
-    padding: 20px;
+    padding: 20px 0 0 20px;
+    width: 25%;
     /* margin: 20px; */
 }
 
@@ -84,6 +87,15 @@ span{
     outline: bisque auto 10px;
     background: #faf9f7;
 }
+
+.control__element > button{
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0 0 0;
+    width: 100%;
+}
+
+
 
 .menu{
     width: 20%;
