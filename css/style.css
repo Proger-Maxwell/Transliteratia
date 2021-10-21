@@ -25,6 +25,15 @@ textarea {
     /* margin: 20px 0px; */
 }
 
+.four-colum{
+    width: 23%;
+}
+
+.tree-colum{
+    width: 31.2%;
+}
+
+
 span{
     font-family: Quinoa-Semibold, sans-serif;
     font-size: 21px;
@@ -74,7 +83,8 @@ span{
 
 .form__element{
     padding: 20px 0 0 20px;
-    width: 25%;
+    min-width: 200px;
+    /* width: 23%; */
     /* margin: 20px; */
 }
 
@@ -88,11 +98,17 @@ span{
     background: #faf9f7;
 }
 
+.control{
+    padding-bottom: 20px;
+    min-height: 100px;
+}
+
 .control__element > button{
     border: none;
-    padding: 5px 10px;
-    margin: 5px 0 0 0;
-    width: 100%;
+    border-radius: 7px;
+    padding: 7px 10px;
+    margin: 5px;
+    width: 40%;
 }
 
 
@@ -118,7 +134,7 @@ span{
     font-weight: 100;
 }
 
-@media (min-width: 300px) {
+@media screen and (min-width: 300px) {
     .menu{
         width: 15%;
     }

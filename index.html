@@ -28,16 +28,16 @@
       <div class="block__form">
         <form name="transliteriatia-form" method="post">
           <div class="form">
-            <div class="form__element"><textarea required="" placeholder="Product-code" name="code" id="transliteriatia-code" type="text" class="modal__textarea data"></textarea></div>
-            <div class="form__element"><textarea required="" placeholder="Product-name" name="name" id="transliteriatia-name" type="text" class="modal__textarea data"></textarea></div>
-            <div class="form__element control">
+            <div class="form__element four-colum"><textarea required="" placeholder="Product-code" name="code" id="transliteriatia-code" type="text" class="modal__textarea data"></textarea></div>
+            <div class="form__element four-colum"><textarea required="" placeholder="Product-name" name="name" id="transliteriatia-name" type="text" class="modal__textarea data"></textarea></div>
+            <div class="form__element four-colum"><textarea readonly="readonly" placeholder="Transliteration" name="transliteration" type="text"  class="modal__textarea" id="transliteriatia-result"></textarea></div>
+            <div class="form__element four-colum control">
               <div class="control__element"><input type="radio" name="transliteriatia-adding" value="-obigriv-1" checked>-obigriv-1<br>
                                             <input type="radio" name="transliteriatia-adding" value="-obigriv-image-1">-obigriv-image-1<br>
                                             <input type="radio" name="transliteriatia-adding" value="-obigriv-description-1">-obigriv-description-1<br></div>
-              <div class="control__element"><button type="submit" name="plusOne" id="plusOne">+1</button></div>
-              <div class="control__element"><button type="submit" name="copy" id="transliteriatia-copy">Скопировать</button></div>
+                                            <!-- <input type="radio" name="transliteriatia-adding" value="-obigriv-description-1"><input type="text"><br> -->
+              <div class="control__element"><button type="submit" name="plusOne" id="plusOne">+1</button><button type="submit" name="copy" id="transliteriatia-copy">Скопировать</button></div>
             </div>
-            <div class="form__element"><textarea readonly="readonly" placeholder="Transliteration" name="transliteration" type="text"  class="modal__textarea" id="transliteriatia-result"></textarea></div>
           </div>
         </form>
       </div>
@@ -45,18 +45,17 @@
     <div class="block">
       <div class="block__title"><span>CONVERT CASE</span></div>
         <div class="block__form">
-          <form name="transliteriatia-form" method="post">
+          <form name="convert-case-form" method="post">
             <div class="form">
-              <div class="form__element"><textarea required="" placeholder="Product-code" name="code" id="transliteriatia-code" type="text" class="modal__textarea data"></textarea></div>
-              <div class="form__element"><textarea required="" placeholder="Product-name" name="name" id="transliteriatia-name" type="text" class="modal__textarea data"></textarea></div>
-              <div class="form__element control">
-                <div class="control__element"><input type="radio" name="transliteriatia-adding" value="-obigriv-1" checked>-obigriv-1<br>
-                                              <input type="radio" name="transliteriatia-adding" value="-obigriv-image-1">-obigriv-image-1<br>
-                                              <input type="radio" name="transliteriatia-adding" value="-obigriv-description-1">-obigriv-description-1<br></div>
-                <div class="control__element"><button type="submit" name="plusOne" id="plusOne">+1</button></div>
-                <div class="control__element"><button type="submit" name="copy" id="copy">Скопировать</button></div>
+              <div class="form__element tree-colum"><textarea required="" placeholder="Convert-case-text" name="convert-case-text" id="convert-case-text" type="text" class="modal__textarea convert-case-text data"></textarea></div>
+              <div class="form__element tree-colum"><textarea readonly="readonly" placeholder="convert-case-result" name="convert-case-result" type="text"  class="modal__textarea" id="convert-case-result"></textarea></div>
+              <div class="form__element tree-colum control">
+                <div class="control__element"><input type="radio" name="convert-case-formating" value="normal" checked>Normal
+                                              <input type="radio" name="convert-case-formating" value="all-big">ALL BIG<br>
+                                              <input type="radio" name="convert-case-formating" value="all-little">all little
+                                              <input type="radio" name="convert-case-formating" value="all-little">all little<br></div>
+                <div class="control__element"><button type="submit" name="convert-case-copy" id="convert-case-copy">Скопировать</button></div>
               </div>
-              <div class="form__element"><textarea readonly="readonly" placeholder="Transliteration" name="transliteration" type="text"  class="modal__textarea" id="transliteriatia-result"></textarea></div>
             </div>
           </form>
         </div>
@@ -66,15 +65,15 @@
           <div class="block__form">
             <form name="html-validator-form" method="post">
               <div class="form">
-                <div class="form__element"><textarea required="" placeholder="HTML structure" name="code" id="html-validator-structure" type="text" class="modal__textarea html-validator-structure"></textarea></div>
-                <div class="form__element control">
+                <div class="form__element tree-colum"><textarea required="" placeholder="HTML structure" name="code" id="html-validator-structure" type="text" class="modal__textarea html-validator-structure"></textarea></div>
+                <div class="form__element tree-colum"><textarea readonly="readonly" placeholder="Validated" name="validated" id="html-validator-result" type="text"  class="modal__textarea"></textarea></div>
+                <div class="form__element tree-colum control">
                   <!-- <div class="control__element"><input type="radio" name="html-validator-adding" value="-obigriv-1" checked>-obigriv-1<br>
                                                 <input type="radio" name="html-validator-adding" value="-obigriv-image-1">-obigriv-image-1<br>
                                                 <input type="radio" name="html-validator-adding" value="-obigriv-description-1">-obigriv-description-1<br></div> -->
                   <!-- <div class="control__element"><button type="submit" name="plusOne" id="plusOne">+1</button></div> -->
                   <div class="control__element"><button type="submit" name="copy" id="html-validator-copy">Скопировать</button></div>
                 </div>
-                <div class="form__element"><textarea readonly="readonly" placeholder="Validated" name="validated" id="html-validator-result" type="text"  class="modal__textarea"></textarea></div>
               </div>
             </form>
           </div>
@@ -87,6 +86,7 @@
 
 
 <script src="js/trans.js"></script>
+<script src="js/convert-case.js"></script>
 <script src="js/html-validator.js"></script>
 </body>
 </html>
