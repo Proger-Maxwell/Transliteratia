@@ -29,7 +29,7 @@ function transliteriatia() {
       }
 
       var radio = document.getElementsByName('transliteriatia-adding');
-      for(var a=0; a<radio.length; a++){
+      for(var a=0; a < radio.length; a++){
         if(radio[a].checked){
           link += radio[a].value;
         }
