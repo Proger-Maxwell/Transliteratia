@@ -35,19 +35,14 @@ function htmlValidate(){
     [' </ strong>', '</strong>']
   ]);
 
-
-
   for (let pair of badTags.entries()) {
-
     while(notValidHtml.includes(pair[0])){
       notValidHtml = replaceAll(notValidHtml, pair[0], pair[1]);
-      console.log(pair[0],pair[1]);
-      console.log(notValidHtml);
     }
   }
 
   document.getElementById("html-validator-result").value = notValidHtml;
-  navigator.clipboard.writeText(validHtml);
+  navigator.clipboard.writeText(notValidHtml);
 
 }
 
