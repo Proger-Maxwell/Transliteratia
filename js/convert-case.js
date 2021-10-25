@@ -19,12 +19,16 @@ function convertCase(){
   navigator.clipboard.writeText(result);
 }
 
-
-
 document.querySelectorAll('.convert-case-text').forEach(item => {
     item.addEventListener('input', event => {
         convertCase();
     });
+});
+
+document.querySelectorAll('.convert-case-radio').forEach(item => {
+  item.addEventListener('input', event => {
+      convertCase();
+  });
 });
   
 document.getElementById('convert-case-copy').addEventListener("click", function(event){
@@ -33,14 +37,13 @@ document.getElementById('convert-case-copy').addEventListener("click", function(
   navigator.clipboard.writeText(copyText);
 });
   
-
 function toNormal(text){
   text = tolittle(text);
   if(!text){return text;}
   return text[0].toUpperCase() + text.slice(1);
 }
 
-function toBIG(text){;
+function toBIG(text){
   text = text.toUpperCase();
   return text;
 }

@@ -47,6 +47,12 @@ document.querySelectorAll('.data').forEach(item => {
   });
 });
 
+document.querySelectorAll('.transliteriatia-radio').forEach(item => {
+  item.addEventListener('input', event => {
+    transliteriatia();
+  });
+});
+
 document.getElementById("transliteriatia-copy").addEventListener("click", function(event){
   event.preventDefault();
   let copyText = document.getElementById("transliteriatia-result").value;
