@@ -7,24 +7,23 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
      crossorigin="anonymous">
+
 </head>
 <body>
-
 <div class="section header">
 </div>
 <div class="section body">
   <div class="menu">
     <div class="menu__logo"><img class="logo" src="images/logo-transliteria.png"></div>
     <div class="menu__items">
-      <div class="menu__item">TRANSLITERATION</div>
-      <div class="menu__item">CONVERT CASE</div>
-      <div class="menu__item">HTNL VALIDATOR</div>
-      <div class="menu__item">IMAGE SCRUBBER</div>
+      <div class="menu__item"><button class="menu__item__button" name="copy" id="html-validator">TRANSLITERATION</button></div>
+      <div class="menu__item"><button class="menu__item__button" name="copy" id="html-validator">CONVERT CASE</button></div>
+      <div class="menu__item"><button class="menu__item__button" name="copy" id="html-validator">HTNL VALIDATOR</button></div>
     </div>
   </div>
   <div class="content">
     <div class="block">
-      <div class="block__title"><span>TRANSLITERATION</span></div>
+      <div class="block__title"><span>TRANSLITERATION</span><img class="block__icon" src="images/arrow-down.png"></div>
       <div class="block__form">
         <form name="transliteriatia-form" method="post">
           <div class="form">
@@ -35,7 +34,6 @@
               <div class="control__element"><input type="radio" name="transliteriatia-adding" class="transliteriatia-radio" value="-obigriv-1" checked>-obigriv-1<br>
                                             <input type="radio" name="transliteriatia-adding" class="transliteriatia-radio" value="-obigriv-image-1">-obigriv-image-1<br>
                                             <input type="radio" name="transliteriatia-adding" class="transliteriatia-radio" value="-obigriv-description-1">-obigriv-description-1<br></div>
-                                            <!-- <input type="radio" name="transliteriatia-adding" value="-obigriv-description-1"><input type="text"><br> -->
               <div class="control__element"><button type="submit" name="plusOne" id="plusOne">+1</button><button type="submit" name="copy" id="transliteriatia-copy">Скопировать</button></div>
             </div>
           </div>
@@ -43,8 +41,8 @@
       </div>
     </div>
     <div class="block">
-      <div class="block__title"><span>CONVERT CASE</span></div>
-        <div class="block__form">
+      <div class="block__title close"><span>CONVERT CASE</span><img class="block__icon rotate" src="images/arrow-down.png"></div>
+        <div class="block__form hidden">
           <form name="convert-case-form" method="post">
             <div class="form">
               <div class="form__element tree-colum"><textarea required="" placeholder="Convert-case-text" name="convert-case-text" id="convert-case-text" type="text" class="modal__textarea convert-case-text data"></textarea></div>
@@ -52,7 +50,6 @@
               <div class="form__element tree-colum control">
                 <div class="control__element"><input type="radio" name="convert-case-formating" class="convert-case-radio" value="normal" id="normal" checked>Normal
                                               <input type="radio" name="convert-case-formating" class="convert-case-radio" value="all-big" id="all-big">ALL BIG<br>
-                                              <!-- <input type="radio" name="convert-case-formating" value="all-little">all little -->
                                               <input type="radio" name="convert-case-formating" class="convert-case-radio" value="all-little" id="all-little">all little<br></div>
                 <div class="control__element"><button type="submit" name="convert-case-copy" id="convert-case-copy">Скопировать</button></div>
               </div>
@@ -61,17 +58,13 @@
         </div>
       </div>
     <div class="block">
-      <div class="block__title"><span>HTML VALIDATOR</span></div>
-          <div class="block__form">
+      <div class="block__title close"><span>HTML VALIDATOR</span><img class="block__icon rotate" src="images/arrow-down.png"></div>
+          <div class="block__form hidden">
             <form name="html-validator-form" method="post">
               <div class="form">
                 <div class="form__element tree-colum"><textarea required="" placeholder="HTML structure" name="code" id="html-validator-structure" type="text" class="modal__textarea html-validator-structure"></textarea></div>
                 <div class="form__element tree-colum"><textarea readonly="readonly" placeholder="Validated" name="validated" id="html-validator-result" type="text"  class="modal__textarea"></textarea></div>
                 <div class="form__element tree-colum control">
-                  <!-- <div class="control__element"><input type="radio" name="html-validator-adding" value="-obigriv-1" checked>-obigriv-1<br>
-                                                <input type="radio" name="html-validator-adding" value="-obigriv-image-1">-obigriv-image-1<br>
-                                                <input type="radio" name="html-validator-adding" value="-obigriv-description-1">-obigriv-description-1<br></div> -->
-                  <!-- <div class="control__element"><button type="submit" name="plusOne" id="plusOne">+1</button></div> -->
                   <div class="control__element"><button type="submit" name="copy" id="html-validator-copy">Скопировать</button></div>
                 </div>
               </div>
@@ -88,5 +81,6 @@
 <script src="js/trans.js"></script>
 <script src="js/convert-case.js"></script>
 <script src="js/html-validator.js"></script>
+<script src="js/animations.js"></script>
 </body>
 </html>

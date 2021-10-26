@@ -40,7 +40,6 @@ function transliteriatia() {
     }
 }
 
-
 document.querySelectorAll('.data').forEach(item => {
   item.addEventListener('input', event => {
     transliteriatia();
