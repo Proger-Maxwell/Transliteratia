@@ -122,7 +122,9 @@ span{
     margin: 5px;
     width: 40%;
 }
-
+.control__element > button:hover{
+    background:#dddfe0;
+}
 
 
 .menu{
@@ -142,8 +144,18 @@ span{
 }
 .menu__item{
     padding: 10px 0px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 100;
+  
+}
+
+.menu__item > a{
+
+    text-decoration: none;
+}
+.menu__item > a:hover{
+    font-size: 22px;
+    text-decoration: none;
 }
 
 .menu__item > button{
